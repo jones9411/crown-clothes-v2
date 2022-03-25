@@ -1,0 +1,20 @@
+import "./form-input.styles.scss";
+
+const FormInput = ({ label, ...otherPops }) => {
+  return (
+    <div className="group">
+      <input className="form-input" {...otherPops} />
+      {label && (
+        <label
+          className={`${
+            otherPops.value.lenght ? "shrink" : ""
+          } form-input-label`}
+        >
+          {label}
+        </label>
+      )}
+    </div>
+  );
+};
+
+export default FormInput;
